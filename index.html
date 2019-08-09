@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .box {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column
+        }
+        
+        header {
+            width: 100%;
+            height: 45px;
+            background: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+        
+        main {
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            flex: 1;
+            background: deepskyblue;
+        }
+        
+        .mainbox {
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            display: flex;
+        }
+        
+        .left {
+            width: 100px;
+            height: auto;
+        }
+        
+        .ul {
+            width: 100%;
+            height: auto;
+        }
+        
+        .ul li {
+            width: 100%;
+            height: 50px;
+            background: rgb(216, 216, 84);
+            margin-top: 15px;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+        }
+        
+        .ul li.active {
+            background: rgb(0, 89, 255);
+        }
+        
+        .right {
+            flex: 1;
+            margin-left: 20px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .right span {
+            width: calc(100%/4);
+            height: 26px;
+            border: 1px solid #fff;
+            margin: 15px 10px 0 0;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        .right span:hover {
+            background: rgba(250, 213, 2, 0.795)
+        }
+        
+        footer {
+            width: 100%;
+            height: 45px;
+            background: #eee;
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+        }
+        
+        #sel {
+            width: 50px;
+            height: 20px;
+        }
+        
+        .ul2 {
+            flex: 1;
+            height: 20px;
+            display: flex;
+        }
+        
+        .ul2 li {
+            width: 20px;
+            height: 100%;
+            background: #999;
+            text-align: center;
+            color: #fff;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        
+        .ul2 li.active {
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <header>
+            <h3>足迹地图</h3>
+        </header>
+        <main>
+            <div class="mainbox">
+                <div class="left">
+                    <ul class="ul">
+                        <!-- <li>北京</li> -->
+                    </ul>
+                </div>
+                <div class="right">
+                    <!-- <span>北京</span> -->
+                </div>
+            </div>
+        </main>
+        <footer>
+            <select id="sel">
+                <!-- <option value="5">5</option> -->
+            </select>
+            <ul class="ul2">
+                <!-- <li>1</li> -->
+            </ul>
+        </footer>
+    </div>
+    <script src="js/libs/require.js" data-main="./js/js"></script>
+</body>
+
+</html>
